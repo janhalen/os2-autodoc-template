@@ -20,7 +20,7 @@ jobs:
 
       - name: Run docker-compose-viz-mermaid
         run: |
-          docker run --rm -v $PWD:/input derlin/docker-compose-viz-mermaid /input/docker-compose.yml -m > output.md
+          docker run --rm -v $PWD:/input derlin/docker-compose-viz-mermaid /input/docker-compose.yml --format markdown > output.md
 
       - name: Commit output.md
         uses: stefanzweifel/git-auto-commit-action@v4
