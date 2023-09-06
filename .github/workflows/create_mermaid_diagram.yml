@@ -17,4 +17,12 @@ jobs:
 
       - name: Run docker-compose-viz-mermaid
         run: |
-          docker run --rm -v $PWD:/input derlin/docker-compose-viz-mermaid /input/docker-compose.yml > output.mmd
+          docker run --rm -v $PWD:/input derlin/docker-compose-viz-mermaid /input/docker-compose.yml > output.md
+
+      - name: Commit output.md
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: GitHub Actions
+          author_email: actions@github.com
+          message: "Update output.md"
+          add: "output.md"
