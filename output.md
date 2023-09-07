@@ -21,7 +21,6 @@ flowchart TB
   mo --> fixtureloader
   moinit[mo-init] --> fixtureloader
   moinit --> mo
-  test-->test
 
   moxdbinit[mox-db-init]
   msgbroker[msg-broker]
